@@ -1,0 +1,525 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Technovate 2020</title>
+<link rel = "icon" href ="{% static 'gallery/logo.png' %}" type = "image/x-icon"> 
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+<link rel="stylesheet" href="{% static 'contact_us/background.css' %}">
+<link rel="stylesheet" href="{% static 'contact_us/style.css' %}">
+
+<style type="text/css">
+	
+	form {
+	position: relative;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	padding: 1em;
+  	border: 1px solid rgba(255,255,255,0.4);
+  	border-radius: 1em;
+	
+	}
+	/* div + div {
+	  margin-top: 4em;
+	} */
+
+	label {
+	  text-align: left;
+	  color: white;
+	  font-size: 20px;
+	  font-weight: 100;
+	  font-family:monospace;
+	}
+	
+	.inputs {
+	  font-family: monospace;
+	  border: 1px solid #999;
+	  border-radius: 10px;
+	  background:rgba(0,0,0,0.6);
+	  -webkit-box-shadow:0 2px 10px 1px rgba(0,0,0,0.9); 
+	  color:white;
+
+	}
+
+	.inputs:focus,{
+	 border-color: #000;
+	}
+
+	
+
+	.button{
+		position: relative;
+		left: 50%;
+		transform: translate(-50%);
+		padding: 2%;
+		margin:0 auto 0 ;
+		opacity: 0.9;
+		color: white;
+		background: black;
+		border:1px solid white;
+		font-size: 20px;
+		border-radius: 10px;
+		box-shadow: 4px 4px 15px 3px rgba(0,0,0,0.3);
+		font-family:monospace;
+
+	}
+
+	</style>
+
+
+</head>
+<body style="background:#000;">
+<!-- partial:index.partial.html -->
+
+<nav style="margin:0; background:#000; color:white; font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-transform: uppercase; 
+        border-bottom: 1px solid white; font-family: Cutive Mono, monospace;"
+         
+        class="navbar navbar-inverse navbar-trans ">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" style="color:white;" href="{% url 'Home:index' %}">Technovate 2020</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" style="color:white;" id="bs-example-navbar-collapse-1">
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'Home:index' %}">Home</a></li>
+        <li><a href="{% url 'Events:index' %}">Events</a></li>
+        <li><a href="{% url 'celeb_night:index' %}">Celebrity Night</a></li>
+        <li><a href="{% url 'PreEvents:index' %}">Pre-Events</a></li>
+        <li><a href="{% url 'gallery:index' %}">Gallery</a></li>
+        <li class="active"><a href="{% url 'ContactUs:index' %}">Contact Us</a></li>
+        <li><a href="{% url 'sponsors:index' %}">Sponsors</a></li>
+        <li><a href="{% url 'AboutUs:index' %}">About Us</a></li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+<div style="padding: 0;margin: 0; z-index: -100000;" id='stars'></div>
+<div style="padding: 0;margin: 0; z-index: -100000;" id='stars2'></div>
+<div style="padding: 0;margin: 0; z-index: -100000;" id='stars3'></div>
+<section class="container" style="background:transparent;">
+    <center><h3 style="color:green">{{message}}</h3></center>
+    <div class="page-header">
+        <h1 style="color:white">Team Technovate 2020<br>
+          <!-- <small>See full features on <a href="https://github.com/marlenesco/material-cards" target="_blank">Github</a></small></h1> -->
+    </div>
+    <div class="row active-with-click">
+        <!-- Student Coordinator -->
+        <div style="margin-bottom:30px;" class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Grey">
+                <h2>
+                    <span>Nitin Chandra</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        Student Coordinator<br>(nitin17100@iiitnr.edu.in)
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="{% static 'contact_us/img/Nitin Chandra.jpg' %}">
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div style="margin-bottom:30px;" class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Grey">
+                <h2>
+                    <span>Sriyuta Srivastava</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        Student Coordinator<br>(sriyuta17101@iiitnr.edu.in)
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="{% static 'contact_us/img/Sriyuta Srivastava.jpg' %}">
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div style="margin-bottom:30px;" class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Grey">
+                <h2>
+                    <span>Yash Khare</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        Student Coordinator<br>(yash17101@iiitnr.edu.in)
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="{% static 'contact_us/img/Yash_Khare.jpg' %}">
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div style="margin-bottom:30px;" class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Grey">
+                <h2>
+                    <span>Rituraj Kushwaha</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        Student Coordinator<br>(rituraj17100@iiitnr.edu.in)
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="{% static 'contact_us/img/Rituraj Kushwaha.jpg' %}">
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div style="margin-bottom:30px;" class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Grey">
+                <h2>
+                    <span>Maihul Rajora</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        Student Coordinator<br>(maihul17101@iiitnr.edu.in)
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="{% static 'contact_us/img/Maihul Rajora.jpg' %}">
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div style="margin-bottom:30px;" class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Grey">
+                <h2>
+                    <span>Jatin Aditya Reddy</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        Student Coordinator<br>(jatin17101@iiitnr.edu.in)
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="{% static 'contact_us/img/Jatin Aditya Reddy.jpg' %}">
+                    </div>
+                </div>
+            </article>
+        </div>
+        <!-- end Student Coordinator -->
+
+        <!-- Technical Coordinator -->
+        <div style="margin-bottom:30px;" class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Deep-Purple">
+                <h2>
+                    <span>Ritvik Muttreja</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        Technical Coordinator<br>(ritvik18100@iiitnr.edu.in)
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="{% static 'contact_us/img/Ritvik Muttreja.jpg' %}">
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div style="margin-bottom:30px;" class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Deep-Purple">
+                <h2>
+                    <span>Tina Sahu</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        Technical Coordinator<br>(tina18101@iiitnr.edu.in)
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="{% static 'contact_us/img/Tina Sahu.jpg' %}">
+                    </div>
+                </div>
+            </article>
+        </div>
+        <!-- end Technical Coordinator -->
+
+
+        <!-- Cultural Coordinator -->
+    
+        <div style="margin-bottom:30px;" class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Amber">
+                <h2>
+                    <span>Yash Vardhan Singh</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        Cultural Coordinator<br>(yashvardhan18101@iiitnr.edu.in)
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="{% static 'contact_us/img/Yash Vardhan Singh.jpg' %}">
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div style="margin-bottom:30px;" class="col-md-4 col-sm-6 col-xs-12">
+            <article class="material-card Amber">
+                <h2>
+                    <span>Manorama Singh Rathore</span>
+                    <strong>
+                        <i class="fa fa-fw fa-star"></i>
+                        Cultural Coordinator<br>(manorama18101@iiitnr.edu.in)
+                    </strong>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <img class="img-responsive" src="{% static 'contact_us/img/Manorama Singh Rathore.jpg' %}">
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- end Cultural Coordinator -->
+
+        <!-- Hospitality -->
+          
+            <div style="margin-bottom:30px;" class="col-md-4 col-sm-6 col-xs-12">
+                <article class="material-card Blue">
+                    <h2>
+                        <span>Priyadarshini Roy</span>
+                        <strong>
+                            <i class="fa fa-fw fa-star"></i>
+                            Hospitality<br>(priyadarshini18100@iiitnr.edu.in)
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="{% static 'contact_us/img/Priyadarshini Roy.jpg' %}">
+                        </div>
+                    </div>
+                </article>
+            </div>
+        <!-- end Hospitality -->
+
+        <!-- Designing -->
+            <div style="margin-bottom:30px;" class="col-md-4 col-sm-6 col-xs-12">
+                <article class="material-card Cyan">
+                    <h2>
+                        <span>Rajat Singh</span>
+                        <strong>
+                            <i class="fa fa-fw fa-star"></i>
+                            Designing<br>(rajat17101@iiitnr.edu.in)
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="{% static 'contact_us/img/Rajat Singh.jpg' %}">
+                        </div>
+                    </div>
+                </article>
+            </div>
+        <!-- End Designing -->
+
+        <!-- Finance Coordinator -->
+            <div style="margin-bottom:30px;" class="col-md-4 col-sm-6 col-xs-12">
+                <article class="material-card Teal">
+                    <h2>
+                        <span>M.K. Chaitanya</span>
+                        <strong>
+                            <i class="fa fa-fw fa-star"></i>
+                            Finance Coordinator<br>(mkchaitanya17100@iiitnr.edu.in)
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="{% static 'contact_us/img/M.K. Chaitanya.jpg' %}">
+                        </div>
+                    </div>
+                </article>
+            </div>
+        <!-- End Finance Coordinator -->
+
+        <!-- Media and Marketing -->
+            <div style="margin-bottom:30px;" class="col-md-4 col-sm-6 col-xs-12">
+                <article class="material-card Green">
+                    <h2>
+                        <span>Trilok Yadav</span>
+                        <strong>
+                            <i class="fa fa-fw fa-star"></i>
+                            Media and Marketing<br>(trilok18101@iiitnr.edu.in)
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="{% static 'contact_us/img/Trilok yadav.jpeg' %}">
+                        </div>
+                    </div>
+                </article>
+            </div>
+        <!-- End Media and Marketing  -->
+
+        <!-- Outlook and Designing  -->
+            <div style="margin-bottom:30px;" class="col-md-4 col-sm-6 col-xs-12">
+                <article class="material-card Light-Green">
+                    <h2>
+                        <span>Sakshi Singh</span>
+                        <strong>
+                            <i class="fa fa-fw fa-star"></i>
+                            Outlook and Designing<br>(sakshi18101@iiitnr.edu.in)
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="{% static 'contact_us/img/Sakshi Singh.jpg' %}">
+                        </div>
+                    </div>
+                </article>
+            </div>
+        <!-- End Outlook and Designing  -->
+
+        <!-- Informals and Food&Beverages   -->
+            <div style="margin-bottom:30px;" class="col-md-4 col-sm-6 col-xs-12">
+                <article class="material-card Deep-Orange">
+                    <h2>
+                        <span>Shreyas Lall</span>
+                        <strong>
+                            <i class="fa fa-fw fa-star"></i>
+                            Informals and Food&Beverages<br>(shreyas18100@iiitnr.edu.in)
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="{% static 'contact_us/img/Sreyas Lall.jpg' %}">
+                        </div>
+                    </div>
+                </article>
+            </div>
+        <!-- EndInformals and Food&Beverages   -->
+        
+        <!-- Web Dev Coordinator  -->
+            <div style="margin-bottom:30px;" class="col-md-4 col-sm-6 col-xs-12">
+                <article class="material-card Brown">
+                    <h2>
+                        <span>Rajiv Nayan Choubey</span>
+                        <strong>
+                            <i class="fa fa-fw fa-star"></i>
+                            Web Dev Coordinator<br>(rajiv17100@iiitnr.edu.in)
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="{% static 'contact_us/img/Rajiv Nayan Choubey.jpg' %}">
+                        </div>
+                    </div>
+                </article>
+            </div>
+        <!-- End Web Dev Coordinator  -->
+    </div>
+</section>
+<div class="container" style="height: 100vh; margin-top:30px;">
+    <div class="row" style="height:100%">
+	
+        <form method="POST" action="{% url 'ContactUs:query' %}" class="form form col-lg-6 col-sm-10 col-xs-11 col-md-8">
+            {% csrf_token %}
+		<center style="color:white">Contact Numbers: +91-8827106331/+91-9109390828</center><br>
+            <div class="form-group">
+                <label for="name">Name:<sup style="color: yellow">*</sup></label>
+                <input class="form-control inputs" required type="text" id="name" name="name"
+                    placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="mail">E-mail:<sup style="color: yellow">*</sup></label>
+                <input class="form-control inputs" required type="email" id="mail" name="email"
+                    placeholder="yourname@example.com">
+            </div>
+            <div class="form-group">
+                <label for="tel">Phone Number:<sup style="color: yellow">*</sup></label>
+                <input class="form-control inputs" type="text" maxlength="10" id="tel" name="phone" required
+                    placeholder="XXXXXXXXXX">
+            </div>
+            <div class="form-group">
+                <label for="institute">Institute:<sup style="color: yellow">*</sup></label>
+                <input class="form-control inputs" type="text" id="institute" name="institute" required
+                    placeholder="IIIT-Naya Raipur">
+            </div>
+            <div class="form-group">
+                <label for="msg">Message:<sup style="color: yellow">*</sup></label>
+                <textarea class="form-control inputs" id="msg" rows=8 name="message"
+                    placeholder="Message" required></textarea>
+            </div>
+            <button class="button" type="submit">Send your message</button>
+        </form>
+    </div>
+</div>
+
+<br><br><br>
+<!-- footer  -->
+<nav style="margin:0; background:rgba(0,0,0,0.8); color:white; font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+  font-family: Cutive Mono, monospace;" class="navbar navbar-fixed-bottom navbar-inverse ">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+ 
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+        data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <ul class="navbar-nav navs">
+        <li><a href="https://www.instagram.com/technovate_iiitnr"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.facebook.com/technovate.iiitnr"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/technovate_iiitnr"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.twitter.com/technovateiiit"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.youtube.com/TechnovateIIITNayaRaipur"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+      
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" style="color:white;" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'game:index' %}">Bored?</a></li>
+        <li><a href="{% url 'hospitality:index' %}">Hospitality</a></li>
+        <li><a href="{% url 'sponsors:previous' %}">Previous Sponsors</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- end footer  -->
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script  src="{% static 'contact_us/script.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Technovate 2020</title>
+  <link rel = "icon" href ="{% static 'gallery/logo.png' %}" type = "image/x-icon"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cutive+Mono'>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+
+<link rel="stylesheet" href="{% static 'about_us/style.css' %}">
+
+</head>
+<body style="background-image:url(https://unsplash.it/1800/800?image=893)">
+<!-- partial:index.partial.html -->
+
+<nav style="margin:0; background:rgba(0,0,0,0.9); color:white; font-size: 1em; border-bottom: 1px solid white;" class="navbar navbar-inverse navbar-trans ">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" style="color:white;" href="{% url 'Home:index' %}">Technovate 2020</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" style="color:white;" id="bs-example-navbar-collapse-1">
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'Home:index' %}">Home</a></li>
+        <li><a href="{% url 'Events:index' %}">Events</a></li>
+        <li><a href="{% url 'celeb_night:index' %}">Celebrity Night</a></li>
+        <li><a href="{% url 'PreEvents:index' %}">Pre-Events</a></li>
+        <li><a href="{% url 'gallery:index' %}">Gallery</a></li>
+        <li><a href="{% url 'ContactUs:index' %}">Contact Us</a></li>
+        <li><a href="{% url 'sponsors:index' %}">Sponsors</a></li>
+        <li class="active"><a href="{% url 'AboutUs:index' %}">About Us</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<br><br><br>
+<main>
+  <section class="mast" style="z-index:-1000; margin-bottom:90px;">
+    <figure class="mast__bgs" style="background-images:url(https://unsplash.it/1800/800?image=893)"></figure>
+    <header class="mast__headerss">
+<center>
+      <h1>Technovate 20-20</h1>
+      <h3>(20-22 March)</h3>  
+      <h2>About Us</h2> 
+      <hr class="sep"/>
+</center>
+
+
+
+<p class="mast__text js-spanizes">
+Technovate is the burst of enthusiasm and young energy in the form of IIIT NR’s techno-cultural fest. 
+The third edition of central India’s fest Technovate, witnessed thousands of visitors and participants 
+from all over the country
+Days in Technovate is packed with leisure of entertainment and zeal of upcoming
+ technical ideas. It provides an excellent opportunity to brush up your skills or find new talents to invest 
+ upon and obviously find the lost energy of youth back on the right spots of responsibilities and fun.</p>
+ Technovate is the right place to meet new people and bond with them in the colourful shades of friendships
+which will make you finally end up with lifelong memories. 
+</p>
+
+<p class="mast__text js-spanizes">
+This year Technovate will again find it’s warm breath in your soon to be revered 
+ideas and active participation. At the end you will be left thinking, 
+“Let the wait be small and the meeting be long next time!”
+</p>
+
+    </header>
+  </section>
+</main>
+
+<!-- footer  -->
+<nav style="margin:0; background:rgba(0,0,0,0.8); color:white; font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+  font-family: Cutive Mono, monospace;" class="navbar navbar-fixed-bottom navbar-inverse ">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+ 
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+        data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <ul class="navbar-nav navs">
+        <li><a href="https://www.instagram.com/technovate_iiitnr"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.facebook.com/technovate.iiitnr"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/technovate_iiitnr"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.twitter.com/technovateiiit"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.youtube.com/TechnovateIIITNayaRaipur"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+      </ul>
+
+    </div>
+      
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" style="color:white;" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'game:index' %}">Bored?</a></li>
+        <li><a href="{% url 'hospitality:index' %}">Hospitality</a></li>
+        <li><a href="{% url 'sponsors:previous' %}">Previous Sponsors</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- end footer  -->
+
+
+<!-- partial -->
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script  src="{% static 'about_us/script.js' %}"></script>
+
+</body>
+</html>

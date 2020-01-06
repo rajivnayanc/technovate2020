@@ -1,0 +1,404 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	
+	<link rel="stylesheet" href="{% static 'Events/background.css' %}">		
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Technovate 2020</title>
+	<link rel = "icon" href ="{% static 'gallery/logo.png' %}" type = "image/x-icon"> 
+
+</head>
+<style type="text/css">
+	body{
+		background:black;
+	}
+
+	h1{
+		font-family: monospace;
+		color:white;
+		text-align: center;
+		font-weight: 100;
+	}
+	.jumbotron{
+			color:white;
+			background: rgba(0,0,0,0.5);
+			margin-top:50px; 
+		}
+	.thumbnail{
+	/* padding:10px; */
+	border: none;
+	height:200px;
+	/* height: fit-content; */
+	/* border-radius: 10px; */
+	background:rgba(200,200,200,0.9);
+	/* box-shadow: 0 2px 10px 1px rgba(0,0,0,0.9); */
+	/* -webkit-box-shadow:0 2px 10px 1px rgba(0,0,0,0.9);  */
+	}
+	.thumbnail img{
+	margin:auto;
+	max-height:100%;
+	max-width:100%;
+	position:relative;
+	top:50%;
+	transform:translateY(-50%);
+	}
+
+	.navs{
+	padding:0;
+	margin:10px 10px 0px 10px;
+	}
+	.navs>li{
+	padding:10px;
+	text-decoration: none;
+	color:white;
+	display: inline;
+	list-style: none;
+	}
+	.navs>li>a{
+	font-size: 25px;
+	}
+
+	.nav>li{
+	font-size:18px;
+	}
+	.logos{
+		margin-bottom:30px;
+	}
+
+	.a{
+		background:white;
+	}
+
+</style>
+<body>
+<nav style=" margin:0; background:transparent; color:white; font-size: 1em;
+          font-weight: 400;
+          letter-spacing: 0em;
+          text-transform: uppercase; 
+          border-bottom: 1px solid white; font-family: Cutive Mono, monospace;"
+         
+        class="navbar navbar-inverse navbar-trans ">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" style="color:white;" href="{% url 'Home:index' %}">Technovate 2020</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" style="color:white;" id="bs-example-navbar-collapse-1">
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'Home:index' %}">Home</a></li>
+        <li><a href="{% url 'Events:index' %}">Events</a></li>
+        <li><a href="{% url 'celeb_night:index' %}">Celebrity Night</a></li>
+        <li><a href="{% url 'PreEvents:index' %}">Pre-Events</a></li>
+        <li><a href="{% url 'gallery:index' %}">Gallery</a></li>
+        <li><a href="{% url 'ContactUs:index' %}">Contact Us</a></li>
+        <li><a href="{% url 'sponsors:index' %}">Sponsors</a></li>
+        <li><a href="{% url 'AboutUs:index' %}">About Us</a></li>
+      </ul>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+<div style="padding: 0;margin: 0; z-index: -100000; position: relative; top:0; overflow: hidden" id='stars'></div>
+<div style="padding: 0;margin: 0; z-index: -100000; position: relative; top:0; overflow: hidden" id='stars2'></div>
+<div style="padding: 0;margin: 0; z-index: -100000; position: relative; top:0; overflow: hidden" id='stars3'></div>
+
+<div class="container-fluid">
+		
+	<div class="jumbotron"><h1><i class="fas fa-donate"></i> Our Previous Sponsors</div>
+
+	<div class="rows a">
+
+		<div class="logos col-md-4 col-sm-6 col-xs-12">
+			<div class="thumbnail">
+				<img src="{% static 'sponsors/sponsors_logos/CGSWD.png' %}">
+			</div>
+			<center style="color:white; padding: 5px;">CG Social Welfare Department</center>
+		</div>
+
+		<div class="logos col-md-4 col-sm-6 col-xs-12">
+			<div class="thumbnail">
+				<img src="{% static 'sponsors/sponsors_logos/BSNL.png' %}">
+			</div>
+			<center style="color:white; padding: 5px;">BSNL</center>
+		</div>
+
+		<div class="logos col-md-4 col-sm-6 col-xs-12">
+			<div class="thumbnail">
+				<img src="{% static 'sponsors/sponsors_logos/Chhattisgarh Tourism Board.jpg' %}">
+			</div>
+			<center style="color:white; padding: 5px;">Chhattisgarh Tourism Board</center>
+		</div>
+		<div class="logos col-md-4 col-sm-6 col-xs-12">
+			<div class="thumbnail">
+				<img src="{% static 'sponsors/sponsors_logos/chhattisgarh housing board.jpg' %}">
+			</div>
+			<center style="color:white; padding: 5px;">Chhattisgarh Housing Board</center>
+		</div>
+		<div class="logos col-md-4 col-sm-6 col-xs-12">
+			<div class="thumbnail">
+				<img src="{% static 'sponsors/sponsors_logos/chips.jpg' %}">
+			</div>
+			<center style="color:white; padding: 5px;">CHIPS</center>
+		</div>
+		<div class="logos col-md-4 col-sm-6 col-xs-12">
+			<div class="thumbnail">
+				<img src="{% static 'sponsors/sponsors_logos/naya-raipur.png' %}">
+			</div>
+			<center style="color:white; padding: 5px;">Naya Raipur</center>
+		</div>
+		<div class="logos col-md-4 col-sm-6 col-xs-12">
+			<div class="thumbnail">
+				<img src="{% static 'sponsors/sponsors_logos/IBM logo.png' %}">
+			</div>
+			<center style="color:white; padding: 5px;">IBM</center>
+		</div>
+
+		<div class="logos col-md-4 col-sm-6 col-xs-12">
+			<div class="thumbnail">
+					<img src="{% static 'sponsors/sponsors_logos/zebronics.png' %}">
+				</div>
+				<center style="color:white; padding: 5px;">Zebronics</center>
+		</div>
+		<div class="logos col-md-4 col-sm-6 col-xs-12">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/union-bank-of-india-logo.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Union Bank of India</center>
+		</div>
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/94.3 My FM.jpg' %}">
+					</div>
+					<center style="color:white; padding: 5px;">94.3 My FM</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/balsamiq.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Balsamiq</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/brainbuxa-education-portal.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">BrainBuxa</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/Bugsee logo.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Bugsee</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/CodeChef.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">CodeChef</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/concept power logo.webp' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Concept Power</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/crazy engineers.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Crazy Engineers</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/eminence gp of ent.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Eminenence Group of Entertainments</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/Github.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Github</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/HE_logo.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Hackerearth</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/Icekraft res logo.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Icekraft</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/jetbrains.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Jetbrains</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/KBS certification logo.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">KBS Certification</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/knowledge tribe.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Knowledge Tribe</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/KTM logo.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">KTM</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/lic-logo-png-transparent.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">LIC</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/logo-square.jpg' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Stack ML</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/methodex-systems-.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Methodex Systems</center>
+		</div>
+
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/Raag Music Academy.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Raag Music Academy</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/sketch logo.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Sketch</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/sticker-mule-logo-png-transparent.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Sticker Mule</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/Tapri Tea House LOgo.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Tapri Tea House</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/trippy.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Trippy</center>
+		</div>
+
+		<div class="logos col-md-3 col-sm-6 col-xs-6">
+				<div class="thumbnail">
+						<img src="{% static 'sponsors/sponsors_logos/voxelway-logo.png' %}">
+					</div>
+					<center style="color:white; padding: 5px;">Voxelway</center>
+		</div>
+
+	</div>
+</div>
+
+
+<br><br><br>
+<!-- footer  -->
+<nav style="margin:0; background:rgba(0,0,0,0.8); color:white; font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+  font-family: Cutive Mono, monospace;" class="navbar navbar-fixed-bottom navbar-inverse ">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+
+
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+				data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+
+			<ul class="navbar-nav navs">
+				<li><a href="https://www.instagram.com/technovate_iiitnr"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+				<li><a href="https://www.facebook.com/technovate.iiitnr"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+				<li><a href="https://www.linkedin.com/company/technovate_iiitnr"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+				<li><a href="https://www.twitter.com/technovateiiit"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+				<li><a href="https://www.youtube.com/TechnovateIIITNayaRaipur"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+			</ul>
+
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" style="color:white;" id="bs-example-navbar-collapse-2">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="{% url 'game:index' %}">Bored?</a></li>
+        		<li><a href="{% url 'hospitality:index' %}">Hospitality</a></li>
+				<li class="active"><a href="{% url 'sponsors:previous' %}">Previous Sponsors</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<!-- end footer  -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
