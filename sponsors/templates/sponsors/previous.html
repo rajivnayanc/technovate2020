@@ -100,16 +100,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" style="color:white;" id="bs-example-navbar-collapse-1">
       
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="{% url 'Home:index' %}">Home</a></li>
-        <li><a href="{% url 'Events:index' %}">Events</a></li>
-        <li><a href="{% url 'celeb_night:index' %}">Celebrity Night</a></li>
-        <li><a href="{% url 'PreEvents:index' %}">Pre-Events</a></li>
-        <li><a href="{% url 'gallery:index' %}">Gallery</a></li>
-        <li><a href="{% url 'ContactUs:index' %}">Contact Us</a></li>
-        <li><a href="{% url 'sponsors:index' %}">Sponsors</a></li>
-        <li><a href="{% url 'AboutUs:index' %}">About Us</a></li>
-      </ul>
+      {% include 'topnavbar.html' %}
 
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -377,28 +368,22 @@
 				<span class="icon-bar"></span>
 			</button>
 
-			<ul class="navbar-nav navs">
-				<li><a href="https://www.instagram.com/technovate_iiitnr"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				<li><a href="https://www.facebook.com/technovate.iiitnr"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-				<li><a href="https://www.linkedin.com/company/technovate_iiitnr"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-				<li><a href="https://www.twitter.com/technovateiiit"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-				<li><a href="https://www.youtube.com/TechnovateIIITNayaRaipur"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-			</ul>
+			{% include 'footmedialinks.html' %}
 
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" style="color:white;" id="bs-example-navbar-collapse-2">
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="{% url 'game:index' %}">Bored?</a></li>
-        		<li><a href="{% url 'hospitality:index' %}">Hospitality</a></li>
-				<li class="active"><a href="{% url 'sponsors:previous' %}">Previous Sponsors</a></li>
-			</ul>
+			{% include 'footnavbar.html' %}
 		</div>
 	</div>
 </nav>
 <!-- end footer  -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+  var li = document.getElementById("navPrevious");
+  li.classList.add("active");
+</script>
 </body>
 </html>
