@@ -121,17 +121,17 @@ img::-moz-selection {
   }
   #mainNav .navbar-brand {
     padding: 10px 20px;
-    color: #fff;
+    color: #000;
   }
   #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(50, 50, 50, 0.8);
   }
   #mainNav .navbar-nav > li.nav-item > a {
     padding: 10px 20px;
-    color: #fff;
+    color: #000;
   }
   #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(50, 50, 50, 0.8);
   }
 }
 
@@ -170,19 +170,19 @@ img::-moz-selection {
 
 header.masthead {
   margin-bottom: 50px;
-  background: no-repeat center center;
-  background-color: #868e96;
-  background-attachment: scroll;
+  /* background: no-repeat center center; */
+  background-color: #fff;
+  /* background-attachment: scroll; */
   position: relative;
-  background-size: cover;
+  /* background-size: cover; */
 }
 
 header.masthead .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  /* height: auto; */
+  /* width: 100%; */
   background-color: #212529;
   opacity: 0.5;
 }
@@ -191,7 +191,7 @@ header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
   padding: 200px 0 150px;
-  color: white;
+  color: #000;
 }
 
 @media only screen and (min-width: 768px) {
@@ -218,7 +218,7 @@ header.masthead .site-heading .subheading {
   font-size: 24px;
   font-weight: 300;
   line-height: 1.1;
-  display: block;
+  /* display: block; */
   margin: 10px 0 0;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -255,7 +255,7 @@ header.masthead .post-heading .meta {
 }
 
 header.masthead .post-heading .meta a {
-  color: #fff;
+  color: #141;
 }
 
 @media only screen and (min-width: 768px) {

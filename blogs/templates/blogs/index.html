@@ -93,26 +93,27 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
+
+      {% for blog in blogs %}
         <div class="post-preview">
-          <a href="post.html">
+          <a href="{% url 'blogs:blogindex' blog.id %}">
             <center>
               <div class="col-lg-12">
-                <img style="width: 90%;" src="{% static 'blogs/img/home-bg.jpg' %}" alt="">
+                <img style="width: 90%;" src="{{blog.blog_image.url}} "  alt="">
               </div>
             </center>
             <h2 class="post-title">
-              Failure is not an option
+              {{blog.blog_title}}
             </h2>
-            <h3 class="post-subtitle">
-              Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-            </h3>
           </a>
           <p class="post-meta">Posted by
-            <a href="#">Start Bootstrap</a>
-            on July 8, 2019</p>
+            <a href="{{blog.author_profile_link}}">{{blog.author_name}}</a>
+            on {{blog.post_date}}</p>
         </div>
-
         <hr>
+        <br>
+      {% endfor %}
+
       </div>
     </div>
   </div>
