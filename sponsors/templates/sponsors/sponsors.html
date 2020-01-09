@@ -192,10 +192,12 @@
 			<br>
 					{% for v in value %}
 					<div class="logos col-lg-6 col-md-4 col-sm-12 col-xs-12">
-						<div class="thumbnail">
-							<img src="{{v.logo.url}}">
-						</div>
-						<center style="color:white; padding: 5px;">{{v.name}}</center>
+						<a target="_blank" href="{{v.url}}">
+							<div class="thumbnail">
+								<img src="{{v.logo.url}}">
+							</div>
+							<center style="color:white; padding: 5px;">{{v.name}}</center>
+						</a>
 					</div>
 					{% endfor %}
 				
@@ -205,10 +207,12 @@
 				<br>
 				{% for v in value %}
 				<div class="logos col-lg-4 col-md-3 col-sm-5 col-xs-6">
-					<div class="thumbnail">
-						<img src="{{v.logo.url}}">
-					</div>
-					<center style="color:white; padding: 5px;">{{v.name}}</center>
+					<a target="_blank" href="{{v.url}}">
+						<div class="thumbnail">
+							<img src="{{v.logo.url}}">
+						</div>
+						<center style="color:white; padding: 5px;">{{v.name}}</center>
+					</a>
 				</div>
 				{% endfor %}
 			{% else %}
@@ -216,12 +220,14 @@
 				<br>
 				{% for v in value %}
 					<div class="logos col-lg-3 col-md-3 col-sm-4 col-xs-6">
-						<div class="thumbnail">
-							<img src="{{v.logo.url}}">
-						</div>
-						<center style="color:white; padding: 5px;">{{v.name}}</center>
+						<a target="_blank" href="{{v.url}}">
+							<div class="thumbnail">
+								<img src="{{v.logo.url}}">
+							</div>
+							<center style="color:white; padding: 5px;">{{v.name}}</center>
+						</a>
 					</div>
-				{% endfor %}
+					{% endfor %}
 			{% endif %}		
 		</div>
 	<br>

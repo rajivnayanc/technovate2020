@@ -12,7 +12,7 @@ class Sponsor(models.Model):
     name = models.CharField(max_length=50)
     types = models.ForeignKey(SponsorType,on_delete=models.CASCADE)
     logo = models.ImageField(upload_to='sponsors_logo', height_field=None, width_field=None, max_length=None)
-
+    url = models.URLField(max_length=500, null=True)
     def __str__(self):
         return self.name 
 
