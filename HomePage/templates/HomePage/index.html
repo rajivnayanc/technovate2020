@@ -21,7 +21,7 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <link rel="stylesheet" href="{% static 'HomePage/style.css' %}">
-
+<link rel="stylesheet" href="{% static 'HomePage/timer.css' %}">
 </head>
 <body style=" margin: 0; overflow: hidden">
 <nav style="z-index: 100 ; margin:0; background:rgba(0,0,0,0.8); color:white; font-size: 1em;
@@ -51,6 +51,29 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+<div id="event_timer">
+<center>
+  <div class="time_block">
+    <p class="time_disp" id="days"></p>
+    <p class="time_head">Days</p>
+  </div>
+
+ <div class="time_block">
+    <p class="time_disp" id="hours"></p>
+    <p class="time_head">Hrs</p>
+  </div >
+
+  <div class="time_block">
+    <p class="time_disp" id="mins"></p>
+    <p class="time_head">Mins</p>
+  </div>
+
+  <div class="time_block">
+    <p class="time_disp" id="secs"></p>
+    <p class="time_head">Secs</p>
+  </div>
+</center>
+</div>
 
 <!-- partial:index.partial.html -->
 <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
@@ -58,8 +81,8 @@
 <div style="padding: 0;margin: 0; z-index: 10;" id='stars2'></div>
 <div style="padding: 0;margin: 0; z-index: 10;" id='stars3'></div>
 
-<div id='title' style="">
-  <img style="" src="{% static 'HomePage/logos.png' %}" id="logo" width="180"alt="">
+<div id='title'>
+  <img src="{% static 'HomePage/logos.png' %}" id="logo" width="180"alt="">
 </div>
 
 <!-- footer  -->
@@ -101,6 +124,9 @@
 <script>
   var li = document.getElementById("idHome");
   li.classList.add("active");
+</script>
+<script src = "{% static 'HomePage/timer.js' %}">
+ 
 </script>
 </body>
 </html>

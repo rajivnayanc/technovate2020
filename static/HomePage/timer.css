@@ -1,0 +1,50 @@
+#event_timer{
+     margin-left: 50%;
+     margin-top: 30px;
+     transform: translateX(-50%);
+     color:white;
+     width: 300px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.time_block{
+    position: relative;
+     display: inline-block; 
+     text-align: center;
+     margin: 3%;
+}
+.time_block:not(:last-child)::after {
+    content: ":";
+    position: absolute;
+    right: -15px;
+    top:20%;
+    transform: translateY(-50%);
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+
+.colon_block {
+    display: inline-block;
+    text-align: center;
+}
+
+.time_head{
+    font-size: large;
+}
+
+.time_disp{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+@media only screen and (max-width: 768px) {
+    .time_head {
+        font-size: medium;
+    }
+
+    .time_disp {
+        font-size: x-large;
+        font-weight: bolder;
+    }
+}
