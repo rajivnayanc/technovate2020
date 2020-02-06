@@ -17,7 +17,7 @@ class Cultural(models.Model):
     contact_number = models.CharField(max_length=10)
     description_file = models.FileField(upload_to='cultural_docs', max_length=100)
     event_logo  = models.ImageField(upload_to='cultural_logo', height_field=None, width_field=None, max_length=None)
-
+    url = models.URLField(max_length=30,blank=True)
     def __str__(self):
         return self.event_name
     
@@ -37,7 +37,7 @@ class Technical(models.Model):
     contact_number = models.CharField(max_length=10)
     description_file = models.FileField(upload_to='technical_docs', max_length=100)
     event_logo  = models.ImageField(upload_to='technical_logo', height_field=None, width_field=None,max_length=None)
-
+    url = models.URLField(max_length=30, blank=True)
     def __str__(self):
         return self.event_name
 
@@ -57,7 +57,7 @@ class Informal(models.Model):
     contact_number = models.CharField(max_length=10)
     description_file = models.FileField(upload_to='informal_docs', max_length=100)
     event_logo = models.ImageField(upload_to='informal_logo', height_field=None,width_field=None, max_length=None,)
-    
+    url = models.URLField(max_length=30, blank=True)
     def __str__(self):
         return self.event_name
 
