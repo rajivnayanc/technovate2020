@@ -89,16 +89,16 @@
     {% endif %}
 
     {% if event.event_1_Prize %}
-      <p>1<sup>st</sup> Prize: Rs{{event.event_1_Prize}}</p>
+      <p>Prize Worth Rs {{event.event_1_Prize}}</p>
     {% endif %}
 
-    {% if event.event_2_Prize %}
+    {% comment %} {% if event.event_2_Prize %}
       <p>2<sup>nd</sup> Prize: Rs{{event.event_2_Prize}}</p>
     {% endif %}
 
     {% if event.event_3_Prize %}
       <p>3<sup>rd</sup> Prize: Rs{{event.event_3_Prize}}</p>
-    {% endif %}
+    {% endif %} {% endcomment %}
 
     {% if event.event_1_Prize or event.event_2_Prize or event.event_2_Prize   %}
       <br><br>
