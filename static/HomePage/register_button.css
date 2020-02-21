@@ -1,0 +1,23 @@
+#register_button {
+    width: fit-content;
+    position: absolute;
+    left:50%;
+    top:80%;
+    transform: translateX(-50%);
+}
+
+#reg_btn{
+    background-color: black;
+    border-color: white;
+    font-size: large;
+    color:white;
+    transition: all 0.5s ease-out;
+}
+
+#reg_btn:hover{
+    background-color: white;
+    color:black;
+    border-color: black;
+    font-size: larger;
+    transform: scale(1.2);
+}

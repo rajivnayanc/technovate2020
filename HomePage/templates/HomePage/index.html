@@ -22,6 +22,7 @@
 <!-- Latest compiled and minified JavaScript -->
 <link rel="stylesheet" href="{% static 'HomePage/style.css' %}">
 <link rel="stylesheet" href="{% static 'HomePage/timer.css' %}">
+<link rel="stylesheet" href="{% static 'HomePage/register_button.css' %}">
 </head>
 <body style=" margin: 0; overflow: hidden">
 <nav style="z-index: 100 ; margin:0; background:rgba(0,0,0,0.8); color:white; font-size: 1em;
@@ -84,6 +85,12 @@
 <div id='title'>
   <img src="{% static 'HomePage/logos.png' %}" id="logo" width="180"alt="">
 </div>
+
+<div id="register_button">
+  <a target="_blank" href="{{output.url}}"><button class="btn" id="reg_btn">{{output.price}}</button></a>
+</div>
+
+
 
 <!-- footer  -->
 <nav style="margin:0; background:rgba(0,0,0,0.8); color:white; font-size: 1em;
